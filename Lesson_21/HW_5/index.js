@@ -1,7 +1,3 @@
-export const setButton = buttonText => {
-  const setButtonItem = document.querySelector('body');
-
-  setButtonItem.innerHTML = `<button>${buttonText}</button>`;
-
-  return setButtonItem;
-};
+/* eslint-disable no-return-assign */
+export const setButton = buttonText =>
+  (document.querySelector('body').innerHTML = `<button>${buttonText}</button>`);
