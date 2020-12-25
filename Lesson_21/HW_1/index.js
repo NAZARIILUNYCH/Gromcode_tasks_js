@@ -1,8 +1,8 @@
 const getTitleElement = () => {
   const titleElement = document.querySelector('.title');
+  
+  console.dir(titleElement);
 };
-
-console.dir(titleElement);
 
 // const getInputElement = () => {
 //   const inputElem = document.querySelector('input[type="text"]');
@@ -10,5 +10,5 @@ console.dir(titleElement);
 //   console.dir(inputElem);
 // };
 
-// getTitleElement();
+getTitleElement();
 // getInputElement();
