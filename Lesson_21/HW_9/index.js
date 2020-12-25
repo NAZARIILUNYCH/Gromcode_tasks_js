@@ -6,6 +6,7 @@ export const finishForm = () => {
   newForm.type = 'text';
   newForm.name = 'login';
   passwordForm.type = 'password';
+  loginForm.prepend(newForm);
 };
 
 finishForm();
