@@ -5,11 +5,8 @@ export const finishForm = () => {
 
   newForm.setAttribute('type', 'text');
   newForm.setAttribute('name', 'login');
-
-  loginForm.prepend(newForm);
-
   passwordForm.setAttribute('type', 'password');
-  passwordForm.setAttribute('name', 'password');
+  loginForm.prepend(newForm);
 };
 
 finishForm();
