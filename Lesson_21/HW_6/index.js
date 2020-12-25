@@ -1,2 +1,2 @@
 /* eslint-disable no-return-assign */
-const clearList = () => (document.querySelector('.categories').innerHTML = '');
+export const clearList = () => (document.querySelector('.categories').innerHTML = '');
