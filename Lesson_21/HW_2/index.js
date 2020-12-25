@@ -6,7 +6,7 @@ export const getItemsList = () => {
   return elementsList;
 };
 
-export const getItesmArray = () => {
+export const getItemsArray = () => {
   const elementsArray = document.querySelectorAll('.tool');
 
   console.dir(Array.from(elementsArray));
@@ -15,4 +15,4 @@ export const getItesmArray = () => {
 };
 
 getItemsList();
-getItesmArray();
+getItemsArray();
