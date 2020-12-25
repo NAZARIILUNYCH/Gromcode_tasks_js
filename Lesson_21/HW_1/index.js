@@ -1,9 +1,9 @@
 const getTitleElement = () => {
-  const titleElement = document.querySelector('.title');
+  const titleElem = document.querySelector('.title');
   
-  console.dir(titleElement);
+  console.dir(titleElem);
   
-  return titleElement;
+  return titleElem;
 };
 
 const getInputElement = () => {
