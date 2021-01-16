@@ -28,6 +28,7 @@ const createUserObj = elem => {
     body: JSON.stringify(formData),
   })
     .then(element => element.json())
+    .then(formField => formField.reset())
     .then(element => {
       alert(JSON.stringify(element));
     })
