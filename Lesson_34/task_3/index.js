@@ -28,10 +28,11 @@ const createUserObj = elem => {
     body: JSON.stringify(formData),
   })
     .then(element => element.json())
-    .then(formField => formField.reset())
     .then(element => {
+      login.reset();
       alert(JSON.stringify(element));
     })
+    .then(() => formData)
     .catch((error.textContent = 'Failed to create user'));
 };
 
