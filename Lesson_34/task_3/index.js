@@ -1,40 +1,37 @@
 /* eslint-disable no-return-assign */
 const baseUrl = 'https://60019cc208587400174db246.mockapi.io/api/v1/user';
 
-const loginForm = document.querySelector('.login-form');
+const login = document.querySelector('.login-form');
 const formInput = document.querySelector('.form-input');
 const submitBtn = document.querySelector('.submit-button');
 const error = document.querySelector('.error-text');
 
-loginForm.addEventListener('input', () => {
-  if (loginForm.reportValidity()) {
+login.addEventListener('input', () => {
+  if (login.reportValidity()) {
     submitBtn.disabled = false;
   }
 });
 
-const createUserObj = () => {
-  const email = document.getElementById('email').value;
-  const user = document.getElementById('name').value;
-  const password = document.getElementById('password').value;
+const createUserObj = elem => {
+  const formData = [...new FormData(login)].reduce(
+    (acc, [key, value]) => ({ ...acc, [key]: value }),
+    {},
+  );
 
-  const userObj = {
-    email,
-    user,
-    password,
-  };
+  elem.preventDefault();
 
   fetch(baseUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
     },
-    body: JSON.stringify(userObj),
+    body: JSON.stringify(formData),
   })
-    .then(elem => elem.json())
-    .then(elem => {
-      alert(JSON.stringify(elem));
+    .then(element => element.json())
+    .then(element => {
+      alert(JSON.stringify(element));
     })
     .catch((error.textContent = 'Failed to create user'));
 };
 
-loginForm.addEventListener('submit', createUserObj);
+login.addEventListener('submit', createUserObj);
