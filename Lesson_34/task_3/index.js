@@ -33,7 +33,9 @@ const createUserObj = elem => {
       alert(JSON.stringify(element));
     })
     .then(() => formData)
-    .catch((error.textContent = 'Failed to create user'));
+    .catch(() => {
+      error.textContent = 'Failed to create user';
+    });
 };
 
 login.addEventListener('submit', createUserObj);
