@@ -12,3 +12,5 @@ const fetchUser = async userId => {
     throw new Error('Failed to fetch user');
   }
 };
+
+fetchUser('fsaasjkhkjhkjhkj');
